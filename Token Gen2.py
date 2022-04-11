@@ -11,18 +11,14 @@ for token in range(20):
     token = random.choice(tokens)
     print(token, end='\n')
 
-
     # Adjust balance
     if token == "Unicorn":
         balance += 4
     elif token == "Donkey":
         balance -= 1
     else:
-        balance -= .50
+        f = .50
+        balance -= f
 
-    #Output
+    # Output
     print(f"Token: {token}, Balance: ${balance}")
-
-
-
-
