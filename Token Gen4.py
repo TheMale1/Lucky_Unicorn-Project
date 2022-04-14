@@ -7,7 +7,7 @@ STARTING_BALANCE = 100
 balance = STARTING_BALANCE
 
 
-for token in range(10):
+for token in range(1, 10):
     number = random.randint(1,100)
 
     # adjust balance
@@ -28,11 +28,15 @@ for token in range(10):
             token = "Zebra"
             balance -= 0.5
 
-            print(f"Token: {token}, Balance: ${balance:.2f}")
+        else:
+            token = "Horse"
+            balance -= 0.5
 
-        print()
-        print(f"Starting balance = ${STARTING_BALANCE:.2f}")
-        print(f"Final balance = ${balance:.2f}")
+    print(f"Token: {token}, Balance: ${balance:.2f}")
+
+print()
+print(f"Starting balance = ${STARTING_BALANCE:.2f}")
+print(f"Final balance = ${balance:.2f}")
 
 
 

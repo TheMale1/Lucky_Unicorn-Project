@@ -1,20 +1,19 @@
 import random
 
-# main routine
+# Main routine
 TEST_AMOUNT = 5
 balance = TEST_AMOUNT
 
 rounds_played = 0
 play_again = ""
 
-while play_again!= "x":
+while play_again != "x":
     rounds_played += 1
-    number = random.randint(6, 36)
+    number = random.randint(1, 100)
 
     if 1 <= number <= 5:
         token = "Unicorn"
         balance += 4
-
 
     elif 6 <= number <= 36:
         token = "Donkey"
@@ -29,7 +28,9 @@ while play_again!= "x":
             token = "Horse"
             balance -= 0.5
 
-    print(f"Round {rounds_played}. Token: {token}. Balance: {balance:.2f}")
+    # Output
+    print(f"Round {rounds_played}. Token {token}. Balance ${balance:.2f}")
     if balance < 1:
-        print("\nSorry but you have run out of money")
-
+        print("\nSorry you are out of money")
+    else:
+        play_again = input("\nDo you want to play again")
